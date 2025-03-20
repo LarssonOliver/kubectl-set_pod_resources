@@ -1,3 +1,19 @@
+/*
+Copyright 2025 Oliver Larsson 
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 package cmd
 
 import (
@@ -25,13 +41,13 @@ var Version = "v0.0.0"
 
 var (
 	setPodResourcesExample = `
-  # Resize the requested resources of a pod named 'foo' to 1Gi of memory and 200m of CPU
+  # Set the requested resources of a pod named 'foo' to 1Gi of memory and 200m of CPU
   %[1]s set-pod-resources foo --requests=memory=1Gi,cpu=200m
 
-  # Resize the limits of a pod named 'foo' to 2Gi of memory and 500m of CPU
+  # Set the limits of a pod named 'foo' to 2Gi of memory and 500m of CPU
   %[1]s set-pod-resources foo --limits=memory=2Gi,cpu=500m
 
-  # Resize the requests of a container named 'bar' in a pod named 'foo' to 1Gi of memory and 200m of CPU
+  # Set the requests of a container named 'bar' in a pod named 'foo' to 1Gi of memory and 200m of CPU
   %[1]s set-pod-resources foo bar --requests=memory=1Gi,cpu=200m`
 )
 
