@@ -25,4 +25,4 @@ go.work.sum
 .env
 
 # Output of the go build command
-bin/kubectl-resize_pod
+bin/kubectl-set_pod_resources
