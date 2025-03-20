@@ -1,4 +1,4 @@
-# kubectl-resize-pod
+# kubectl-set_pod_resources
 
 Kubectl plugin designed to simplify InPlacePodVerticalScaling.
 

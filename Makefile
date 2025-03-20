@@ -1,12 +1,12 @@
 BIN_DIR := bin
-BIN_NAME := kubectl-resize_pod
+BIN_NAME := kubectl-set_pod_resources
 
 SOURCE_FILES := go.mod go.sum $(shell find cmd pkg -name '*.go')
 
 all: $(BIN_DIR)/$(BIN_NAME)
 
 $(BIN_DIR)/$(BIN_NAME): $(SOURCE_FILES)
-	go build -o $@ cmd/kubectl-resize_pod.go
+	go build -o $@ cmd/kubectl-set_pod_resources.go
 
 .PHONY: clean
 

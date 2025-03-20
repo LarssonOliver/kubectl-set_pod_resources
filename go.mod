@@ -1,4 +1,4 @@
-module github.com/larssonoliver/kubectl-resize-pod
+module github.com/larssonoliver/kubectl-set_pod_resources
 
 go 1.24.0
 
