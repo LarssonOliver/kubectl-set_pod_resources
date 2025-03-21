@@ -37,7 +37,8 @@ import (
 	"maps"
 )
 
-var Version = "v0.0.0"
+// Set by the build process
+var Version string
 
 var (
 	setPodResourcesExample = `

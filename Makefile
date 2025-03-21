@@ -16,10 +16,13 @@ BIN_NAME := kubectl-set_pod_resources
 
 SOURCE_FILES := go.mod go.sum $(shell find cmd pkg -name '*.go')
 
+VERSION := $(shell git describe --tags --always --dirty)
+LD_FLAGS := -X github.com/larssonoliver/kubectl-set_pod_resources/pkg/cmd.Version=$(VERSION)
+
 all: $(BIN_DIR)/$(BIN_NAME)
 
 $(BIN_DIR)/$(BIN_NAME): $(SOURCE_FILES)
-	go build -o $@ cmd/kubectl-set_pod_resources.go
+	go build -ldflags "$(LD_FLAGS)" -o $@ cmd/kubectl-set_pod_resources.go
 
 .PHONY: clean
 
