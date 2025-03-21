@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Oliver Larsson 
+Copyright 2025 Oliver Larsson
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -155,7 +155,9 @@ func (o *SetPodResourcesOptions) Complete(f cmdutil.Factory, cmd *cobra.Command,
 	}
 
 	if len(o.selector) > 0 {
-		builder = builder.LabelSelectorParam(o.selector)
+		builder = builder.
+			LabelSelectorParam(o.selector).
+			ResourceTypes("pods")
 	}
 
 	builder = builder.Latest()
