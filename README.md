@@ -62,6 +62,11 @@ Example:
 sudo cp bin/* /usr/local/bin
 ```
 
+Or, to make development easier:
+```bash
+sudo ln -s $(pwd)/bin/* /usr/local/bin/
+```
+
 ### Uninstall
 Remove the previously installed files from `PATH`. That is: 
 - `kubectl-set_pod_resources`
