@@ -30,7 +30,7 @@ Not too bad! 👍
 Since 1.32 however, the same command will be rejected by the API server.
 Instead, we have to type out this monstrosity:
 ```bash
-kubectl patch pod nginx  --subresource resize --patch '{"spec":{"containers":[{"name":"nginx","resources":{"requests":{"cpu":"2"},"limits":{"cpu":"4"}}}]}}'
+kubectl patch pod nginx --subresource resize --patch '{"spec":{"containers":[{"name":"nginx","resources":{"requests":{"cpu":"2"},"limits":{"cpu":"4"}}}]}}'
 ```
 For scripting I guess this is fine, but I regularly type this when experimenting. 🤮
 
