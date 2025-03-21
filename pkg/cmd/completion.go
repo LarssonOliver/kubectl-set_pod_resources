@@ -1,5 +1,5 @@
 /*
-Copyright 2025 Oliver Larsson 
+Copyright 2025 Oliver Larsson
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -25,7 +25,6 @@ import (
 	"k8s.io/kubectl/pkg/util/completion"
 )
 
-
 func registerCompletionFuncForFlags(cmd *cobra.Command, f cmdutil.Factory) {
 	cmdutil.CheckErr(cmd.RegisterFlagCompletionFunc(
 		"containers",
@@ -37,8 +36,8 @@ func argsPodNameAndContainerCompletionFunc(f cmdutil.Factory) func(*cobra.Comman
 
 	return func(cmd *cobra.Command, args []string, toComplete string) ([]string, cobra.ShellCompDirective) {
 		if len(args) == 1 {
-            containers := completion.CompGetContainers(f, args[0], toComplete)
-            return containers, cobra.ShellCompDirectiveNoFileComp
+			containers := completion.CompGetContainers(f, args[0], toComplete)
+			return containers, cobra.ShellCompDirectiveNoFileComp
 		}
 
 		pods, compDirective := completionFunc(cmd, args, fmt.Sprintf("pods/%s", toComplete))

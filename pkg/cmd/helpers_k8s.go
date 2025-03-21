@@ -39,7 +39,6 @@ func selectContainers(containers []v1.Container, spec string) ([]*v1.Container, 
 	return out, skipped
 }
 
-
 // selectString is copied from
 // https://github.com/kubernetes/kubernetes/blob/aa35eff1b636f587f418f9cc16a020353735d125/staging/src/k8s.io/kubectl/pkg/cmd/set/helper.go#L43-L79
 

@@ -21,8 +21,8 @@ import (
 
 	"github.com/spf13/pflag"
 
+	"github.com/larssonoliver/kubectl-set_pod_resources/pkg/cmd"
 	"k8s.io/cli-runtime/pkg/genericiooptions"
-    "github.com/larssonoliver/kubectl-set_pod_resources/pkg/cmd"
 )
 
 func main() {
